@@ -1,4 +1,4 @@
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: xarray_mongodb
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xarray_mongodb/xarray_mongodb-{{ version }}.tar.gz
-  sha256: d55c766d9d320a6e83b1d49a0db4b0b0617972b6bca39078fd1da207d0a026dd
+  sha256: d0b5dc64774158ea39167f94627ffb5d6d1edb5972c45d4ed001902c0652ef51
 
 build:
   noarch: python
@@ -17,24 +17,27 @@ requirements:
   build:
     - python >=3.6
     - pip
+    - setuptools
+    - setuptools-scm
   run:
     - python >=3.6
-    - numpy >=1.13
-    - pandas >=0.21
-    - dask >=1.1
-    - xarray >=0.10.4
+    - setuptools
+    - numpy >=1.15
+    - pandas >=0.24
+    - dask >=1.2
+    - xarray >=0.13
     - pymongo >=3.7
 
 test:
   imports:
     - xarray_mongodb
   requires:
-    - pytest >=3.7
+    - pytest >=4
     - pytest-asyncio >=0.10
 
 about:
   home: https://github.com/AmphoraInc/xarray_mongodb
-  license: APACHE-2.0
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: Store xarray objects in MongoDB
