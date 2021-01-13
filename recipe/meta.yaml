@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: xarray_mongodb
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/x/xarray_mongodb/xarray_mongodb-{{ version }}.tar.gz
-  sha256: d0b5dc64774158ea39167f94627ffb5d6d1edb5972c45d4ed001902c0652ef51
+  sha256: 70d7113aff77974be49294ed49d8e8f9ff924f90e1fd8919308b8283522564f2
 
 build:
   noarch: python
