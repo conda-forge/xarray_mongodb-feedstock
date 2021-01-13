@@ -5,11 +5,9 @@ Home: https://github.com/AmphoraInc/xarray_mongodb
 
 Package license: Apache-2.0
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xarray_mongodb-feedstock/blob/master/LICENSE.txt)
 
 Summary: Store xarray objects in MongoDB
-
-
 
 Current build status
 ====================
