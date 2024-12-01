@@ -5,22 +5,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/x/xarray_mongodb/xarray_mongodb-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/x/xarray_mongodb/xarray_mongodb-{{ version }}.tar.gz
   sha256: 70d7113aff77974be49294ed49d8e8f9ff924f90e1fd8919308b8283522564f2
 
 build:
   noarch: python
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - python >=3.6
+  host:
+    - python {{ python_min }}
     - pip
     - setuptools
     - setuptools-scm
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - setuptools
     - numpy >=1.15
     - pandas >=0.24
@@ -34,6 +34,7 @@ test:
   requires:
     - pytest >=4
     - pytest-asyncio >=0.10
+    - python {{ python_min }}
 
 about:
   home: https://github.com/AmphoraInc/xarray_mongodb
