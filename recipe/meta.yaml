@@ -1,4 +1,4 @@
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: xarray_mongodb
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/x/xarray_mongodb/xarray_mongodb-{{ version }}.tar.gz
-  sha256: 70d7113aff77974be49294ed49d8e8f9ff924f90e1fd8919308b8283522564f2
+  sha256: b31be61711323054f1aab2a1f3e0ece85e1a5fdbbe0b96616a688148dddbaeb2
 
 build:
   noarch: python
@@ -22,11 +22,11 @@ requirements:
   run:
     - python >={{ python_min }}
     - setuptools
-    - numpy >=1.15
-    - pandas >=0.24
-    - dask >=1.2
-    - xarray >=0.13
-    - pymongo >=3.7
+    - numpy >=1.19
+    - pandas >=1.1
+    - dask >=2.24
+    - xarray >=0.16
+    - pymongo >=3.11
 
 test:
   imports:
@@ -46,4 +46,3 @@ about:
 extra:
   recipe-maintainers:
     - crusaderky
-    - gimperiale

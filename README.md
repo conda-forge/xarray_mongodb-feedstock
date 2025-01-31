@@ -144,5 +144,4 @@ Feedstock Maintainers
 =====================
 
 * [@crusaderky](https://github.com/crusaderky/)
-* [@gimperiale](https://github.com/gimperiale/)
 
